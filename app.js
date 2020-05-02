@@ -1,4 +1,4 @@
-const api = "http://www.omdbapi.com/?i=tt3896198&apikey=742643c8&"
+const api = "https://www.omdbapi.com/?i=tt3896198&apikey=742643c8&"
 
 /* Manullal binds */
 
