@@ -108,9 +108,11 @@ html{
   font-size: 18px;
   width: 100%;
   display: flex;
+  flex-wrap: nowrap;
+  flex-basis: none;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .ui.card{
