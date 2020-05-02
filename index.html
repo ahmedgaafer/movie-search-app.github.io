@@ -3,9 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <script
+  src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+  <link rel="stylesheet" href="app.css">
+  <link rel="icon" href="favico.png">
+  <title>Movie search</title>
 </head>
 <body>
-  Hey
+
+<div class="ui vertical center aligned segment main">
+  <div class="ui text container push">
+    <div class="ui inverted header">
+      Movie Search Service
+    </div>
+    <h2>Search for any movie you want</h2>
+    <a href="#service"><div class="ui huge button"> Let's go <i class="right arrow icon"></i></div></a>
+  </div>
+</div>
+<div class="app">
+  <div class="content">
+    <div class="box"></div>
+    <div class="box-text">
+      You can search for any movie and our special service will bring all the data about that movie.
+      </br>
+      Just fill the search data and we will do the rest.
+    </div>
+    <div id="service">
+        <div>
+          <label class="control-label" for="t">Title:</label>
+          <div class="ui input">
+            <input id="title" type="text" placeholder="Ex: Avengers" required>
+          </div>
+        </div>
+        &nbsp;&nbsp;
+        <div>
+          <label class="control-label" for="y">Year:</label>
+          <div class="ui input">
+            <input id="year" type="text" placeholder="Ex: 2017">
+          </div>
+        </div>
+        &nbsp;&nbsp;
+        <div>
+          <span>Plot : </span>
+          <div id="plot" class="ui selection dropdown plot">
+            <div class="text"></div>
+            <i class="dropdown icon"></i>
+          </div>
+        </div>
+        &nbsp;&nbsp;
+        <div>
+          <span>Type : </span>
+          <div id="type" class="ui selection dropdown type">
+            <div class="text"></div>
+            <i class="dropdown icon"></i>
+          </div>
+        </div>
+        &nbsp;&nbsp;
+        <button id="search" type="button" class="ui huge button">Search</button>
+        <button id="reset" type="reset" class="ui huge button">Reset</button>
+    </div>
+
+    <div id="card" class="hidden">
+      <div class="ui card">
+        <div class="image">
+          <img id="poster" src="box.jpg">
+        </div>
+        <div class="content">
+          <a id="ttitle" class="header"></a>
+          <div class="meta">
+            <span id="release" class="date"></span>
+            <span id="genre" class="date"></span>
+          </div>
+          <span id="pplot" class="description">
+          </span>
+        </div>
+        <div class="extra content">
+          <a id="production"></a>
+          <a id="runtime"></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="app.js"></script>
 </body>
 </html>
